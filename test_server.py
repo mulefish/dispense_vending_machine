@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, request, jsonify
 import qrcode
 
 app = Flask(__name__)
@@ -14,8 +14,6 @@ def generate_qrcode():
     itemToReach['storeId_fk']=1
     itemToReach['machineId']="WarmMoon"
     itemToReach['spoolId']="A1"
-
-
 
     qr.add_data(itemToReach)
     qr.make(fit=True)
@@ -37,6 +35,17 @@ def generate_qrcode():
     # send qr code image as a file
     return send_file(img_file, mimetype='image/png')
 
+@app.route('/isOkToDispense', methods=['POST'])
+def isOkToDispense():
+    # Check if the request contains JSON data
+    if request.is_json:
+        # Get the JSON data from the request
+        json_data = request.get_json()
+        # Return the received JSON data
+        return jsonify(json_data), 200
+    else:
+        # If the request does not contain JSON data, return an error
+        return jsonify({"error": "Request must contain JSON data"}), 400
 
 @app.route('/')
 def index():
