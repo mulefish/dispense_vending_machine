@@ -18,20 +18,23 @@
     <div id="qrcode"></div>
 
     <script>
-        function generateQRCode(url) {
-            var qrcodeDiv = document.getElementById("qrcode");
+        function generateQRCode(payload) {
+            const qrcodeDiv = document.getElementById("qrcode");
             qrcodeDiv.innerHTML = "";
             const qr = new QRCode(qrcodeDiv, {
-                text: url,
+                text: payload,
                 width: 200,
                 height: 200
             });
         }
         function makeQRforSpool(spoolId) { 
             document.getElementById("inputText").value=""
-            const url = `http://192.168.5.54:80/avend?action=dispense&code=${spoolId}`
-            generateQRCode(url)
-            document.getElementById("payload").innerHTML=url
+            // const url = `http://192.168.5.54:80/avend?action=dispense&code=${spoolId}`
+            const store=1
+            const machine=1
+            payload = `${store},${machine},${spoolId}`
+            generateQRCode(payload)
+            document.getElementById("payload").innerHTML=payload
         }
 
         function useTextInput() {
@@ -41,7 +44,6 @@
             if ( textToEncode.length > 0 ) {
                 generateQRCode(textToEncode)
                 document.getElementById("payload").innerHTML=textToEncode
-
             } else {
                 alert("Need to have some text to make the qr with!")
                 document.getElementById("payload").innerHTML=""
@@ -71,8 +73,5 @@
         }
         makeButtons() 
     </script>
-
-
-
 </body>
 </html>
