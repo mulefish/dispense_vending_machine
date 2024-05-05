@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        button {
+            width: 70px;
+        }
+    </style></stype>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='qrcode.min.js') }}"></script>
+</head>
+<body>
+    <div id="buttons"></div>
+    <hr/>
+    <div id="payload"></div>
+    <hr/>
+    <div id="qrcode"></div>
+
+    <script>
+        function generateQRCode(url) {
+            var qrcodeDiv = document.getElementById("qrcode");
+            qrcodeDiv.innerHTML = "";
+            const qr = new QRCode(qrcodeDiv, {
+                text: url,
+                width: 200,
+                height: 200
+            });
+        }
+        function makeQRforSpool(spoolId) { 
+            document.getElementById("inputText").value=""
+            const url = `http://192.168.5.54:80/avend?action=dispense&code=${spoolId}`
+            generateQRCode(url)
+            document.getElementById("payload").innerHTML=url
+        }
+
+        function useTextInput() {
+            const textToEncode=document.getElementById("inputText").value 
+            document.getElementById("inputText").value=""
+
+            if ( textToEncode.length > 0 ) {
+                generateQRCode(textToEncode)
+                document.getElementById("payload").innerHTML=textToEncode
+
+            } else {
+                alert("Need to have some text to make the qr with!")
+                document.getElementById("payload").innerHTML=""
+
+            }
+        }
+
+        function makeButtons() {
+            let spool = 2
+            const width = 10 
+            const depth = 10
+            const span=width - 1
+            const input = `<tr><td colspan='${span}'><input type="text" id="inputText" size=100 /></td><td><button onclick='useTextInput()'>submit</button></td></tr>`
+            let table = "<table border='1'>"
+            table += input
+    
+            for ( let i=0; i < width; i++) {
+                let row = "<tr>"
+                for ( let ｊ=0; ｊ < depth; ｊ++) {
+                    row += `<td align='center'><button onclick='makeQRforSpool(${spool})'>${spool}</button></td>`
+                    spool += 2
+                }
+                row += "</tr>"
+                table += row
+            }
+            document.getElementById("buttons").innerHTML=table
+        }
+        makeButtons() 
+    </script>
+
+
+
+</body>
+</html>
