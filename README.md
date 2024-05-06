@@ -13,7 +13,8 @@ Click a button to see a QR
 4: Call GCP's DB to verify that it is OK to dispense a given spool 
 
 # TODO:
-Actually call the API. Currently spoofing that by running 'python test_server.py' 
+Actually call the API. Currently spoofing that by running 'python test_server.py' ( http://localhost:8082/ )  
+and also 'python listener.py' 
 
 # QRCode:
 There are many ways to make a QR code. Currently using one from https://davidshimjs.github.io/qrcodejs/  
