@@ -19,3 +19,18 @@ Dispense code successful - {
   "timestamp": "2024-05-05T16:57:06.001522"
 }
 
+Dispense code successful - {
+  "machine": 1,
+  "spool": 66,
+  "store": 1,
+  "timestamp": "2024-05-11T16:21:46.250400"
+}
+
+Dispense code successful - {
+  "machine": 1,
+  "spool": 66,
+  "store": 1,
+  "timestamp": "2024-05-11T16:21:48.401695"
+}
+
+store 1 machine 1 spool 2 timestamp 2024-05-13T17:34:27.017953store 1 machine 1 spool 2 timestamp 2024-05-13T17:34:33.682608store 1 machine 1 spool 2 timestamp 2024-05-13T17:34:34.056391store 1 machine 1 spool 2 timestamp 2024-05-13T17:35:28.620599store 1 machine 1 spool 2 timestamp 2024-05-13T17:35:29.080077store 1 machine 1 spool 90 timestamp 2024-05-13T17:36:14.211172store 1 machine 1 spool 90 timestamp 2024-05-13T17:36:14.563176store 1 machine 1 spool 90 timestamp 2024-05-13T17:36:15.301252

@@ -23,10 +23,10 @@ def dispense_code(session_id):
     print("Dispense code successful")
 
 def isOkToDispense(store, machine, spool):
-    url = "http://localhost:8082/isOkToDispense"
-    headers = {
-        'Content-Type': 'application/json',
-    }
+    # url = "http://localhost:8082/isOkToDispense"
+    # headers = {
+    #     'Content-Type': 'application/json',
+    # }
     timestamp = datetime.now().isoformat()
     data = {
         "store": store,
@@ -34,15 +34,21 @@ def isOkToDispense(store, machine, spool):
         "spool": spool,
         "timestamp": timestamp
     }
-    response = requests.post(url, headers=headers, json=data)
-    if response.status_code == 200:
-        output = "Dispense code successful - " + response.text + "\n"
-    else:
-        output = f"Failed to dispense code: {response.text}\n"
+    # response = requests.post(url, headers=headers, json=data)
+    # if response.status_code == 200:
+    #     output = "Dispense code successful - " + response.text + "\n"
+    # else:
+    #     output = f"Failed to dispense code: {response.text}\n"
+    store = data["store"]
+    machine = data["machine"]
+    spool = data["spool"]
+    timestamp = data["timestamp"]
+    output = "store {} machine {} spool {} timestamp {}".format(store, machine, spool, timestamp)
     with open('output.txt', 'a') as f:
         f.write(output)
         print(output)
-    return response.json()
+    # return response.json()
+    return data 
 
 def parse_input(input_str):
     pattern = r'^(\d+),(\d+),(\d+)$'
@@ -57,17 +63,31 @@ def parse_input(input_str):
 
 if __name__ == "__main__":
     print("Loop indefinitely to listen to standard input")
+    count = 0 
     for line in sys.stdin:
         if len(line.strip()) > 0:
+            count += 1  
+            if count > 5: 
+                print("exiting now {}".format(count))
+                break  
 
-            candidate = parse_input(line)
-            if candidate["status"] == True:
-                #session_id = start_session()
-                store = candidate["store"]
-                machine = candidate["machine"]
-                spool = candidate["spool"]
-                result_as_json = isOkToDispense(store, machine, spool)
-                print(result_as_json)
+            if "1,1,2" in line:
+                print("Terminating loop due to signal 1,1,2")
+                break
             else:
-                print("Rejected: " + line )
+                print("Got this input |{}|".format( line ))
+                session_id = start_session()
+                print("session_id {}".format(session_id) ) 
+            # print("LINE |{}|".format( line ))
+            # candidate = parse_input(line)
+            # if candidate["status"] == True:
+            #     session_id = start_session()
+            #     dispense_code(session_id);
+            #     store = candidate["store"]
+            #     machine = candidate["machine"]
+            #     spool = candidate["spool"]
+            #     result_as_json = isOkToDispense(store, machine, spool)
+            #     print("result is: {}".format(result_as_json)) 
+            # else:
+            #     print("Rejected: " + line )
                 

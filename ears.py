@@ -5,6 +5,12 @@ from datetime import datetime
 import re
 import asyncio
 
+async def fetch_dummy_data():
+    async with aiohttp.ClientSession() as session:
+        async with session.get('http://34.145.40.53:8080/doDummy') as response:
+            data = await response.text()  # Assuming the response is text, adjust if it's JSON or another format
+            print("Response from dummy endpoint:", data)
+            return data
 
 async def start_session():
     async with aiohttp.ClientSession() as session:
@@ -15,40 +21,38 @@ async def start_session():
             print("Session ID:", session_id)
             return session_id
         
-async def dispense_code(session_id):
+async def dispense_code(session_id, spool):
     headers = {
         'Cookie': f'sessionid={session_id}'
     }
+    command = f"http://192.168.5.54:80/avend?action=dispense&code={spool}"
     async with aiohttp.ClientSession(headers=headers) as session:
-        async with session.get('http://192.168.5.54:80/avend?action=dispense&code=14') as response:
+        async with session.get(command) as response:
             print("Dispense code successful")
 
-
 async def main():
-    DEBUG=False
-    count = 0 
-    last_line = "" 
-    if DEBUG == True:
+    DEBUG = False
+    if DEBUG:
+        await fetch_dummy_data()
         session_id = await start_session()
         await dispense_code(session_id)
 
     print("Loop indefinitely to listen to standard input")
-    count = 0 
     for line in sys.stdin:
-
-if len(line.strip()) > 0:
-
-            if "1,1,24" in line:
-                print("{} Terminating loop due to signal 1,1,2".format(count))
+        line = line.strip()
+        if line:
+            if line == "1,1,24":
+                print("Terminating loop due to signal 1,1,2")
                 break
             else:
-                if line != last_line:
-                    last_line = line
-                    print("{} Got this input |{}|".format( count, line ))
+                pieces = line.split(",")
+                if len(pieces) == 3:
+                    store, machine, spool = pieces
+                    await fetch_dummy_data()  # Fetch dummy data before starting session
                     session_id = await start_session()
-                    await dispense_code(session_id)
-                else: 
-                    print("Skipping {} {} ".format( line , last_line))
+                    await dispense_code(session_id, spool)
+                else:
+                    print("Invalid input format:", line)
 
 if __name__ == "__main__":
     asyncio.run(main())
