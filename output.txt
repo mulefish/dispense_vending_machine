@@ -1,36 +1,276 @@
-Dispense code successful - {
-  "machine": 1,
-  "spool": 1,
-  "store": 1,
-  "timestamp": "2024-05-05T16:56:55.878474"
-}
+Hello
+Version 3 Loop indefinitely to listen to standard input!
+Loop indefinitely to listen to standard input!
+Session started
+Session ID: {fddbf321-1df5-4b97-8b48-8fc7bdd50883}
+store 1 machine 1 spool 34 session_id {fddbf321-1df5-4b97-8b48-8fc7bdd50883}
+http://192.168.5.54:80/avend?action=dispense&code=34
+Dispense code successful
+Loop indefinitely to listen to standard input!
+Session started
+Session ID: {971a168d-3f5f-4cd4-b935-f9f89ecc2847}
+store 1 machine 1 spool 24 session_id {971a168d-3f5f-4cd4-b935-f9f89ecc2847}
+http://192.168.5.54:80/avend?action=dispense&code=24
+Dispense code successful
+Loop indefinitely to listen to standard input!
+Session started
+Session ID: {abf1c66d-286d-41cb-84d4-901f4afb15a0}
+store 1 machine 1 spool 12 session_id {abf1c66d-286d-41cb-84d4-901f4afb15a0}
+http://192.168.5.54:80/avend?action=dispense&code=12
+Dispense code successful
+Loop indefinitely to listen to standard input!
+Session started
+Session ID: {026c8b0c-9596-47d5-888c-cbf821dba6c9}
+store 1 machine 1 spool 34 session_id {026c8b0c-9596-47d5-888c-cbf821dba6c9}
+http://192.168.5.54:80/avend?action=dispense&code=34
+Dispense code successful
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {52d43e57-31e4-4cc6-8a7b-93c87387a826}
+4 store 1 machine 1 spool 34 session_id {52d43e57-31e4-4cc6-8a7b-93c87387a826}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B4 C Dispense code successful
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {9c4dda1b-a0f1-443c-be10-2697ef3d8c9a}
+4 store 1 machine 1 spool 12 session_id {9c4dda1b-a0f1-443c-be10-2697ef3d8c9a}
+4 A http://192.168.5.54:80/avend?action=dispense&code=12
+4 B4 C Dispense code successful
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {8e7f95f9-ccb0-4f5a-a03e-5600bdbff137}
+4 store 1 machine 1 spool 24 session_id {8e7f95f9-ccb0-4f5a-a03e-5600bdbff137}
+4 A http://192.168.5.54:80/avend?action=dispense&code=24
+4 B4 C Dispense code successful
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {e2d0e8cc-ffef-4dea-bffe-f565cdfa3e0d}
+4 store 1 machine 1 spool 36 session_id {e2d0e8cc-ffef-4dea-bffe-f565cdfa3e0d}
+4 A http://192.168.5.54:80/avend?action=dispense&code=36
+4 B4 C Dispense code successful
+4 Loop indefinitely to listen to standard input!
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {f13d4579-6c69-48cd-8ef8-32cb176bbb3d}
+4 store 1 machine 1 spool 36 session_id {f13d4579-6c69-48cd-8ef8-32cb176bbb3d}
+4 A http://192.168.5.54:80/avend?action=dispense&code=36
+4 B
+4 C Dispense code successful
 
-Dispense code successful - {
-  "machine": 1,
-  "spool": 1,
-  "store": 1,
-  "timestamp": "2024-05-05T16:56:57.911736"
-}
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {ea44cda5-fbea-4c36-8258-30bf9f3c3b2d}
+4 store 1 machine 1 spool 24 session_id {ea44cda5-fbea-4c36-8258-30bf9f3c3b2d}
+4 A http://192.168.5.54:80/avend?action=dispense&code=24
+4 B
+4 C Dispense code successful
 
-Dispense code successful - {
-  "machine": 1,
-  "spool": 26,
-  "store": 1,
-  "timestamp": "2024-05-05T16:57:06.001522"
-}
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {dee464f2-0ea5-420e-b03a-0724b99e0bac}
+4 store 1 machine 1 spool 12 session_id {dee464f2-0ea5-420e-b03a-0724b99e0bac}
+4 A http://192.168.5.54:80/avend?action=dispense&code=12
+4 B
+4 C Dispense code successful
 
-Dispense code successful - {
-  "machine": 1,
-  "spool": 66,
-  "store": 1,
-  "timestamp": "2024-05-11T16:21:46.250400"
-}
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {a7cf8e42-245d-4778-b15d-26f4d6a3131a}
+4 store 1 machine 1 spool 24 session_id {a7cf8e42-245d-4778-b15d-26f4d6a3131a}
+4 A http://192.168.5.54:80/avend?action=dispense&code=24
+4 B
+4 C Dispense code successful
 
-Dispense code successful - {
-  "machine": 1,
-  "spool": 66,
-  "store": 1,
-  "timestamp": "2024-05-11T16:21:48.401695"
-}
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {931699bf-3a04-4597-9d86-594b7d0662a8}
+4 store 1 machine 1 spool 36 session_id {931699bf-3a04-4597-9d86-594b7d0662a8}
+4 A http://192.168.5.54:80/avend?action=dispense&code=36
+4 B
+4 C Dispense code successful
 
-store 1 machine 1 spool 2 timestamp 2024-05-13T17:34:27.017953store 1 machine 1 spool 2 timestamp 2024-05-13T17:34:33.682608store 1 machine 1 spool 2 timestamp 2024-05-13T17:34:34.056391store 1 machine 1 spool 2 timestamp 2024-05-13T17:35:28.620599store 1 machine 1 spool 2 timestamp 2024-05-13T17:35:29.080077store 1 machine 1 spool 90 timestamp 2024-05-13T17:36:14.211172store 1 machine 1 spool 90 timestamp 2024-05-13T17:36:14.563176store 1 machine 1 spool 90 timestamp 2024-05-13T17:36:15.301252
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {02730cb2-0d94-4d6f-9e1d-3e827c5e698e}
+4 store 1 machine 1 spool 12 session_id {02730cb2-0d94-4d6f-9e1d-3e827c5e698e}
+4 A http://192.168.5.54:80/avend?action=dispense&code=12
+4 B
+4 C Dispense code successful
+
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {5ad45f1e-0857-488a-a514-69263b9a04fc}
+4 store 1 machine 1 spool 24 session_id {5ad45f1e-0857-488a-a514-69263b9a04fc}
+4 A http://192.168.5.54:80/avend?action=dispense&code=24
+4 B
+4 C Dispense code successful
+
+4 Loop indefinitely to listen to standard input!
+4 Session started
+Session ID: {ede97ca3-098f-4d13-8527-a75afb3e5c55}
+4 store 1 machine 1 spool 36 session_id {ede97ca3-098f-4d13-8527-a75afb3e5c55}
+4 A http://192.168.5.54:80/avend?action=dispense&code=36
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {d19cefa8-7a31-4cde-843c-9bb8dfc67254}
+4 store 1 machine 1 spool 34 session_id {d19cefa8-7a31-4cde-843c-9bb8dfc67254}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {eff069a5-79c6-4fbf-a83b-bb93aa45b4e8}
+4 store 1 machine 1 spool 34 session_id {eff069a5-79c6-4fbf-a83b-bb93aa45b4e8}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {5769771e-d06c-4d75-b9d8-3a2408d05285}
+4 store 1 machine 1 spool 34 session_id {5769771e-d06c-4d75-b9d8-3a2408d05285}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {83c6bbbf-30a5-4d9e-b858-d8753c19b65c}
+4 store 1 machine 1 spool 34 session_id {83c6bbbf-30a5-4d9e-b858-d8753c19b65c}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {de21c0c4-bfba-448c-a8c6-d4ae310325ce}
+4 store 1 machine 1 spool 34 session_id {de21c0c4-bfba-448c-a8c6-d4ae310325ce}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {07b66d85-51a8-4aa3-9c3b-24ca845a465e}
+4 store 1 machine 1 spool 34 session_id {07b66d85-51a8-4aa3-9c3b-24ca845a465e}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {4b8c9a00-9ea3-4329-9444-cff133ac0deb}
+4 store 1 machine 1 spool 34 session_id {4b8c9a00-9ea3-4329-9444-cff133ac0deb}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {59769e87-18d7-4a05-bbd3-bb09c4ec00fd}
+4 store 1 machine 1 spool 34 session_id {59769e87-18d7-4a05-bbd3-bb09c4ec00fd}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {87648c1c-a016-4e67-8f3f-6aeb6ada535d}
+4 store 1 machine 1 spool 34 session_id {87648c1c-a016-4e67-8f3f-6aeb6ada535d}
+4 A http://192.168.5.54:80/avend?action=dispense&code=34
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {9a6c5d1c-155e-4bba-9ae4-1fda3543287a}
+4 store 1 machine 1 spool 32 session_id {9a6c5d1c-155e-4bba-9ae4-1fda3543287a}
+4 A http://192.168.5.54:80/avend?action=dispense&code=32
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {cbeb2c59-83db-4f4d-9e2b-906700f618a3}
+4 store 1 machine 1 spool 32 session_id {cbeb2c59-83db-4f4d-9e2b-906700f618a3}
+4 A http://192.168.5.54:80/avend?action=dispense&code=32
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {51f6df22-379b-4daa-9500-e0088fd1b44d}
+4 store 1 machine 1 spool 32 session_id {51f6df22-379b-4daa-9500-e0088fd1b44d}
+4 A http://192.168.5.54:80/avend?action=dispense&code=32
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {fd957421-9335-4db8-ba3e-04d91231b5ce}
+4 store 1 machine 1 spool 32 session_id {fd957421-9335-4db8-ba3e-04d91231b5ce}
+4 A http://192.168.5.54:80/avend?action=dispense&code=32
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {169db1df-4cbc-4901-9efc-76403c5f96c6}
+4 store 1 machine 1 spool 26 session_id {169db1df-4cbc-4901-9efc-76403c5f96c6}
+4 A http://192.168.5.54:80/avend?action=dispense&code=26
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {4677c1e6-d5fb-488f-aa6e-91c019797b43}
+4 store 1 machine 1 spool 26 session_id {4677c1e6-d5fb-488f-aa6e-91c019797b43}
+4 A http://192.168.5.54:80/avend?action=dispense&code=26
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {317520b2-55f2-4930-8de0-d4be3e38485a}
+4 store 1 machine 1 spool 26 session_id {317520b2-55f2-4930-8de0-d4be3e38485a}
+4 A http://192.168.5.54:80/avend?action=dispense&code=26
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {40c6828c-fb51-4f85-a48f-ad194dc3fad2}
+4 store 1 machine 1 spool 72 session_id {40c6828c-fb51-4f85-a48f-ad194dc3fad2}
+4 A http://192.168.5.54:80/avend?action=dispense&code=72
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {98c42fb8-5509-45e3-99a9-7cfe9f829787}
+4 store 1 machine 1 spool 72 session_id {98c42fb8-5509-45e3-99a9-7cfe9f829787}
+4 A http://192.168.5.54:80/avend?action=dispense&code=72
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {0a48c777-99c9-4598-84b0-0c1527446c4b}
+4 store 1 machine 1 spool 72 session_id {0a48c777-99c9-4598-84b0-0c1527446c4b}
+4 A http://192.168.5.54:80/avend?action=dispense&code=72
+4 B
+4 C Dispense code successful
+
+4 C ready again
+4 Session started
+Session ID: {cce3c3c8-4bc6-422b-ab8c-2280ae628756}
+4 store 1 machine 1 spool 72 session_id {cce3c3c8-4bc6-422b-ab8c-2280ae628756}
+4 A http://192.168.5.54:80/avend?action=dispense&code=72
+4 B
+4 C Dispense code successful
+
+4 C ready again
