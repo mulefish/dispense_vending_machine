@@ -3,12 +3,12 @@ import aiohttp
 from datetime import datetime
 import asyncio
 
-async def fetch_dummy_data():
-    async with aiohttp.ClientSession() as session:
-        async with session.get('http://34.145.40.53:8080/doDummy') as response:
-            data = await response.text()  # Assuming the response is text, adjust if it's JSON or another format
-            print("Response from dummy endpoint:", data)
-            return data
+# async def fetch_dummy_data():
+#     async with aiohttp.ClientSession() as session:
+#         async with session.get('http://34.145.40.53:8080/doDummy') as response:
+#             data = await response.text()  # Assuming the response is text, adjust if it's JSON or another format
+#             print("Response from dummy endpoint:", data)
+#             return data
 
 async def start_session():
     async with aiohttp.ClientSession() as session:
@@ -42,12 +42,15 @@ async def main():
         pieces = line.split(",")
         if len(pieces) == 3:
             store, machine, spool = pieces
+            print("store {} machine {} spool {}".format( store, machine, spool))
             # await fetch_dummy_data()
             session_id = await start_session()
-            print("store {} machine {} spool {} session_id {}".format( store, machine, spool, session_id))
+            print("store {} machine {} spool {}".format( store, machine, spool, session_id))
+            print("session_id={} and spool={}".format(session_id, spool))
             await dispense_code(session_id, spool)
         else:
             print("Invalid input format:", line)
-            print("input should be something like 1,1,34")
+            print("input ought to look like 1,1,34")
+
 if __name__ == "__main__":
     asyncio.run(main())

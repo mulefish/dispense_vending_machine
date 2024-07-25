@@ -1,6 +1,5 @@
 import sys
 import aiohttp
-from datetime import datetime
 import asyncio
 
 async def fetch_dummy_data():
@@ -18,7 +17,7 @@ async def start_session():
             print("Session started")
             print("Session ID:", session_id)
             return session_id
-        
+
 async def dispense_code(session_id, spool):
     headers = {
         'Cookie': f'sessionid={session_id}'
@@ -30,24 +29,27 @@ async def dispense_code(session_id, spool):
             print("Dispense code successful")
 
 async def main():
-    # DEBUG = False
-    # if DEBUG:
-    #     await fetch_dummy_data()
-    #     session_id = await start_session()
-    #     await dispense_code(session_id)
-
     print("Loop indefinitely to listen to standard input!")
+    loop_count = 0
     for line in sys.stdin:
-        line = line.strip()
-        pieces = line.split(",")
-        if len(pieces) == 3:
-            store, machine, spool = pieces
-            # await fetch_dummy_data()
-            session_id = await start_session()
-            print("store {} machine {} spool {} session_id {}".format( store, machine, spool, session_id))
-            await dispense_code(session_id, spool)
-        else:
-            print("Invalid input format:", line)
-            print("input should be something like 1,1,34")
+        loop_count += 1
+        if loop_count > 3:
+            print("Processed 3 inputs, exiting.")
+            break
+
+        try:
+            line = line.strip()
+            pieces = line.split(",")
+            if len(pieces) == 3:
+                store, machine, spool = pieces
+                session_id = await start_session()
+                print("store {} machine {} spool {} session_id {}".format(store, machine, spool, session_id))
+                await dispense_code(session_id, spool)
+            else:
+                print("Invalid input format:", line)
+                print("Input should be something like 1,1,34")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
 if __name__ == "__main__":
     asyncio.run(main())
