@@ -58,3 +58,6 @@ def qr():
 
 if __name__ == '__main__':
     app.run(debug=True, port=8082)
+    print("SEE http://localhost:8082/ ")
+    print("or better yet see ")
+    print("http://localhost:8082/qr")
