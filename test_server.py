@@ -51,5 +51,10 @@ def isOkToDispense():
 def index():
     return render_template('index.html')
 
+@app.route('/qr')
+def qr():
+    return render_template('qr.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=8082)
