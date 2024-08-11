@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='qrcode.min.js') }}"></script>
+</head>
+<body>
+    <a href="/">also see orig</a>
+    <hr/>
+    <input type="text" id="inputText" value="1,1,12" ></input>
+    <button onClick="getQR()">getQR()</button>
+    <div id="qrcode"></div>
+    <script>
+        function generateQRCode(payload) {
+            const qrcodeDiv = document.getElementById("qrcode");
+            qrcodeDiv.innerHTML = "";
+            const qr = new QRCode(qrcodeDiv, {
+                text: payload,
+                width: 200,
+                height: 200
+            });
+        }
+
+        function getQR() { 
+            const input = document.getElementById("inputText").value
+            generateQRCode(input)
+            document.getElementById("payload").innerHTML=input
+        }
+    </script>
+</body>
+</html>
